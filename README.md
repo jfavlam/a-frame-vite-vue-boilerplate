@@ -4,7 +4,7 @@
 
 Included in the boilerplate:
 
-- aframe-extras controls and animation-mixer: https://github.com/c-frame/aframe-extras  (MIT License)
+- aframe-extras controls and animation-mixer: https://github.com/c-frame/aframe-extras (MIT License)
 - aframe physx : https://github.com/c-frame/physx (MIT License)
 - aframe-blink-controls: https://github.com/jure/aframe-blink-controls (MIT License)
 - simple-navmesh-constraint: https://github.com/AdaRoseCannon/aframe-xr-boilerplate (MIT Licence)
@@ -13,21 +13,32 @@ Included in the boilerplate:
 
 **Demo**: https://onivers.com/aframe-vue-boilerplate/
 
-Create a folder for your project and :
+---
+
+## Quickstart
+
+Create a folder for your project and:
 
 ### Clone (or fork, or download)
+
 ```sh
 git clone https://github.com/Chabloz/a-frame-vite-vue-boilerplate.git .
 ```
+
 ### Install
+
 ```sh
 npm ci
 ```
+
 ### Dev
+
 ```sh
 npm run dev
 ```
+
 ### Build
+
 ```sh
 npm run build
 ```

@@ -1,10 +1,10 @@
-AFRAME.registerComponent('listen-to', {
+AFRAME.registerComponent("listen-to", {
   multiple: true,
 
   schema: {
-    target: {type: 'selector'},
-    event: {type: 'string', default: 'click'},
-    emit: {type: 'string', default: 'click'},
+    target: { type: "selector" },
+    event: { type: "string", default: "click" },
+    emit: { type: "string", default: "click" },
   },
 
   init: function () {
@@ -14,11 +14,20 @@ AFRAME.registerComponent('listen-to', {
 
   onEvent: function () {
     this.el.emit(this.data.emit);
+    console.log(this.data.emit);
+    // if (this.el.getAttribute("id") === "boat") {
+    //   console.log(this.el);
+    //   this.el.setAttribute("position", "0.1 -0.5 -6.5");
+    // }
   },
 
   update: function (oldData) {
-    if (oldData.target != this.data.target || oldData.event != this.data.event) {
-      if (oldData.target) oldData.target.removeEventListener(oldData.event, this.onEvent);
+    if (
+      oldData.target != this.data.target ||
+      oldData.event != this.data.event
+    ) {
+      if (oldData.target)
+        oldData.target.removeEventListener(oldData.event, this.onEvent);
       this.data.target.addEventListener(this.data.event, this.onEvent);
     }
   },
@@ -26,5 +35,4 @@ AFRAME.registerComponent('listen-to', {
   remove: function () {
     this.data.target.removeEventListener(this.data.event, this.onEvent);
   },
-
 });

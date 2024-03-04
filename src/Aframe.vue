@@ -3,11 +3,11 @@ import { ref } from "vue";
 import TheOnboarding from "@/components/TheOnboarding.vue";
 import TheOverlay from "@/components/TheOverlay.vue";
 import TheScene from "@/components/TheScene.vue";
-// import TheSceneCar from "@/components/TheSceneCar.vue";
-// import TheSceneGrab from "@/components/TheSceneGrab.vue";
-// import TheSceneSki from "@/components/TheSceneSki.vue";
-// import TheScenePaint from "@/components/TheScenePaint.vue";
-// import TheSceneFish from "@/components/TheSceneFish.vue";
+import TheSceneCar from "./components/TheSceneCar.vue";
+import TheSceneGrab from "./components/TheSceneGrab.vue";
+import TheSceneSki from "./components/TheSceneSki.vue";
+import TheScenePaint from "./components/TheScenePaint.vue";
+import TheSceneFish from "./components/TheSceneFish.vue";
 import TheSceneRaycaster from "@/components/TheSceneRaycaster.vue";
 import TheSceneTroll from "@/components/TheSceneTroll.vue";
 import TheSceneGrabCollect from "@/components/TheSceneGrabCollect.vue";
@@ -44,5 +44,6 @@ const loaded = ref(false);
   <!-- <TheSceneKart @loaded="loaded = true" /> -->
   <!-- <TheSceneBoat @loaded="loaded = true" /> -->
   <!-- <TheSceneTrain @loaded="loaded = true" /> -->
+  <!-- <TheSceneFish @loaded="loaded = true" /> -->
   <TheSceneAnimalCrossing @loaded="loaded = true" />
 </template>

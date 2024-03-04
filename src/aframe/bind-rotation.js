@@ -1,7 +1,7 @@
-AFRAME.registerComponent('bind-rotation', {
+AFRAME.registerComponent("bind-rotation", {
   schema: {
-    target: {type: 'selector'},
-    convertToLocal: {type: 'boolean', default: false},
+    target: { type: "selector" },
+    convertToLocal: { type: "boolean", default: false },
   },
 
   init: function () {
@@ -17,7 +17,7 @@ AFRAME.registerComponent('bind-rotation', {
 
     if (!this.data.convertToLocal) {
       target.matrixWorld.decompose(this.position, this.quaternion, this.scale);
-      el.quaternion.copy( this.quaternion);
+      el.quaternion.copy(this.quaternion);
       el.updateMatrixWorld(true);
     } else {
       target.updateMatrixWorld(true);
@@ -27,5 +27,5 @@ AFRAME.registerComponent('bind-rotation', {
       this.quaternion.premultiply(this.parentQuaternion);
       el.quaternion.copy(this.quaternion);
     }
-  }
+  },
 });

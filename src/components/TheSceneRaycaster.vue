@@ -18,18 +18,15 @@ const allAssetsLoaded = ref(false);
     <a-assets @loaded="allAssetsLoaded = true"> </a-assets>
 
     <template v-if="allAssetsLoaded">
-      <a-box
-        class="clickable-near"
-        position="-4 0 -4"
-        color="red"
-        _clickable
-      ></a-box>
-      <a-box
-        class="clickable-far"
-        position="-4 0 -40"
-        color="blue"
-        _clickable
-      ></a-box>
+
+      <!-- Définir des entités cibles avec des attributs near et far -->
+      <a-entity near="1" far="10" position="0 1 -3">
+        <!-- Contenu de l'entité -->
+      </a-entity>
+
+      <a-entity near="5" far="15" position="2 1 -5">
+        <!-- Contenu de l'entité -->
+      </a-entity>
     </template>
 
     <TheCameraRig />

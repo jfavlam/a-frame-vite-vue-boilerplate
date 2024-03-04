@@ -4,10 +4,9 @@ import "../aframe/hide-in-vr.js";
 import "../aframe/simple-navmesh-constraint.js";
 import "../aframe/blink-controls.js";
 import "../aframe/physx-grab.js";
-// import "../aframe/track-vertical-gesture.js";
-// import "../aframe/brush.js";
-// import "../aframe/vibrate.js";
-import "../aframe/raycaster-custom.js";
+import "../aframe/track-vertical-gesture.js";
+import "../aframe/brush.js";
+import "../aframe/vibrate.js";
 </script>
 
 <template>
